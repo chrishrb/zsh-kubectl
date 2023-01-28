@@ -11,4 +11,4 @@ plug "chrishrb/zsh-kubectl"
 ```
 
 ## License
-The **zsh-kubectl** plugin is released under the [Apache License 2.0](https://github.com/chrishrb/zsh-kubectl/blob/main/LICENSE) unless explicitly mentioned in the file header.
+The **zsh-kubectl** plugin is released under the [GPL-3.0 license](https://github.com/chrishrb/zsh-kubectl/blob/main/LICENCE) unless explicitly mentioned in the file header.
