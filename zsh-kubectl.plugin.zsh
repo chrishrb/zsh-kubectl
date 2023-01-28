@@ -11,7 +11,7 @@ if [[ ! -f "$COMPLETIONS_DIR/_kubectl" ]]; then
   kubectl completion zsh 2> /dev/null >| "$COMPLETIONS_DIR/_kubectl" &|
 fi
 
-# This command is used a LOT both below and in daily life
+# This command is used a LOT in daily life
 alias k=kubectl
 
 # Add completions to the FPATH
