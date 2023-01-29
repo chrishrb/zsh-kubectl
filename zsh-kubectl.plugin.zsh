@@ -17,3 +17,8 @@ alias k=kubectl
 # Add completions to the FPATH
 typeset -TUx FPATH fpath
 fpath=("$COMPLETIONS_DIR" $fpath)
+
+# Make it easy to reset the completions file when a new kubectl version is released
+reset-kubectl-completions() {
+  kubectl completion zsh 2> /dev/null >| "$COMPLETIONS_DIR/_kubectl" &|
+}
