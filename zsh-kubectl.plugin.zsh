@@ -14,6 +14,13 @@ if [[ ! -f "$COMPLETIONS_DIR/_kubectl" || ! $(find "$COMPLETIONS_DIR/_kubectl" -
   kubectl completion zsh 2> /dev/null >| "$COMPLETIONS_DIR/_kubectl" &|
 fi
 
+# add optional argocd cli autocompletion
+if (( $+commands[argocd] )); then
+  if [[ ! -f "$COMPLETIONS_DIR/_argocd" || ! $(find "$COMPLETIONS_DIR/_argocd" -newermt "24 hours ago" -print) ]]; then
+    argocd completion zsh 2> /dev/null >| "$COMPLETIONS_DIR/_argocd" &|
+  fi
+fi
+
 # Add completions to the FPATH
 typeset -TUx FPATH fpath
 fpath=("$COMPLETIONS_DIR" $fpath)
